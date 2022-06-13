@@ -1,0 +1,350 @@
+:root{
+    --primario: #1f1d2c;
+    --secundario: #f1a600;
+    --ter: #242635;
+    --cua: #e5e5e5;
+    --blaco: #fff;
+    --negro: #000;
+
+    --fuentePrincipal:'Inter', 'sans-serif';
+    --clippy: polygon(0 0, 0 0, 0 100%, 0 100%);
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+/*GLOBALES*/
+
+body{
+    background-color: var(--primario);
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-family: var(--fuentePrincipal);
+    
+}
+header{
+    margin: 0 10%;
+}
+
+p{
+    color: var(--cua);
+}
+a{
+    text-decoration: none;
+    color: var(--cua);
+}
+
+h1{
+    color: var(--cua);
+    font-size: 15rem;
+    margin: 0;
+    padding: 0%;
+    
+}
+h2{
+    text-align: center;
+    color: var(--cua);
+    font-size: 5rem;
+}
+.header__contenedorTres__imagenes{
+    width: 2.4rem;
+}
+.navegacion{
+    display: flex;
+    justify-content: right;
+    gap: 3rem;
+    padding: 2rem 5rem;
+    
+    /*justify-content: space-evenly;
+    margin-left: 40%;*/
+}
+
+/* MENU HAMBURGUESA */
+
+.menu{
+position: left;
+
+}
+.menu_hamburguesa{
+    width: 5rem;
+    height: 5rem;
+}
+.contenedor_menu{
+    display: flex;
+    justify-content: flex-end;
+}
+.nav__label,
+.nav__input{
+    display: none;
+}
+.navegacion__enlace{
+    --clippy: polygon(0 0, 0 0, 0 100%, 0 100%);
+}
+.navegacion__enlace:hover {
+    color: var(--secundario);
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+}
+.navegacion__enlace::after{
+    content: "";
+    display: block;
+    background: var(--blaco);
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .5s;
+}
+@media (max-width: 860px) {
+    .nav__label{
+        display: block;
+        cursor: pointer;
+    }
+    .navegacion{
+        display: none;
+    }
+}
+
+/* HEADER */
+
+.contenedor__header{
+    margin-bottom: 10rem;
+    background-position: 100% 0;
+    background-image: url(../img/Rectangle\ 34.svg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    
+}
+.contenedor__header2{
+    background-image: url(../img/pexels-andrea-piacquadio-774909.jpg);
+    background-position: 90% 90%;
+    background-repeat: no-repeat;
+    background-size: 40%;
+
+}
+.header__espacio{
+    height: 20rem;
+}
+
+.header__imagen2{
+    width: 60rem;
+    height: 60rem;
+}
+.header__parrafo, 
+.header__contenedorDos__parrafo{
+    font-size: 5rem;
+    margin: 0;
+    padding: 0;
+    display:table;
+}
+.header__anios{
+    color: var(--secundario);
+}
+
+.header__contenedorDos{
+    display: table;
+}
+.header__contenedorTres{
+    width: 27.2rem;
+    display: flex;
+    justify-content: space-between;       
+}
+.header__contenedorTres__imagenes{
+    width: 50px;
+    height: 50px;
+    margin-top: 3rem;
+}
+.contenedor{
+   width: 100%;
+   text-align: center;
+   background-image: url(../img/Rectangle\ 33-1.svg);
+   padding: 3rem 0;
+    
+}
+.contenedor__1{
+    text-align: center;
+    margin: 0 12rem;
+    
+}
+.contenedor__1__titulo{
+    margin: 0;
+}
+.contenedor__1__parrafo{
+    text-align: center;
+    padding: 1rem;
+    margin: 0 12rem;
+}
+.contenedor__2{
+    text-align: center;
+    margin: 3rem 12rem 0 12rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    
+}
+
+.contenedor__2__imagen1{
+    width: 150px;
+    height: 150px;
+}
+.contenedor__2__imagen2{
+    width: 150px;
+    height: 150px;
+}
+
+/* SECCION EXPERIENCIA */
+
+.contenedor__experiencia{
+    width: 50%;
+    margin: 0 auto;
+}
+.contenedor__grid{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+   
+    
+}
+.contenedor__grid__experiencia{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: left;
+    align-items: center;
+    gap: 2rem;
+    
+}
+.amazon,
+.abnb,
+.google{
+    height: 100%;
+}
+.grid__nombre{
+    font-size: 14px;
+}
+.grid__duracion{
+    font-size: 10px;
+}
+
+/* HABILIDADES */
+
+.habilidades{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    margin: 0 auto;
+    width: 60%;
+}
+.habilidades__datos{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    
+}
+.section__habilidades{
+    margin: 5rem 0;
+    padding: 3rem;
+    background-image: url(../img/Rectangle\ 34-1.svg);
+    background-repeat: no-repeat;
+    background-size: 37%;
+   
+}
+.habilidades__titulo{
+    margin: 0;
+    text-align: left;
+}
+.habilidades__porcentaje{
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    color: var(--secundario);
+    font-size: 8rem;
+    padding: 0;
+    margin: 0;
+}
+.habilidades__habilidad{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr); 
+    align-items: center;
+}
+
+/* PORTAFOLIO */
+
+.portafolio__contenedor{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+.portafolio__cont__imagenes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.portafolio__celda1{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    background-color: var(--secundario);
+    align-content: center;
+    padding: 1.5rem;
+    height: 70%;
+}
+.portafolio__celda2{
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    background-color: var(--ter);
+    padding: 1.5rem;
+    height: 70%;
+}
+.portafolio__celda3{
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    background-color: var(--secundario);
+    padding: 1.5rem;
+    height: 70%;
+}
+ /* CONTACTO */
+
+.contacto{
+    background-image: url(../img/Rectangle\ 33-1.svg);
+    /*padding-bottom: 5rem;*/
+}
+
+.contacto__contenedor{
+    width: 50%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    
+}
+.contacto__image{
+    width: 8rem;
+    height: 8rem;
+}
+.contacto__titulo{
+    font-size: 16px;
+}
+.contacto__dato{
+    font-size: 12px;
+}
+.contacto__grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.contacto__phone,
+.contacto__mail{
+    text-align: center;
+    
+}
+.contacto__espacio{
+    height: 5rem;
+}
+
+
+/* FOOTER */
+
+.footer{
+    padding: 8rem 0;
+    text-align: center;
+}
